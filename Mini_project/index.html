@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini project FIRST</title>
+    <!-- Font Awesome Icon Library -->    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="slide_searchBar.css">
+    <script defer src="script.js"></script>
+</head>
+<div id="mySidenav" class="sidenav">
+    <div class="opa-side"></div>
+    <div class="content-side">
+        <a href="javascript:void(0)" 
+        class="closebtn" 
+        onclick="closeNav()">&times;</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </div>
+</div>
+<body>
+    <!-- <div class="opacity-body"></div> -->
+    <nav class="nav-bar">
+        <div class="logo" onclick="openNav()">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+        <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">About</a></li>
+            <!-- ปุ่มLoginเปลี่ยน คลาสcontainer-secondเป็นblockเพื่อแสดงหน้าใส่ข้อมูลที่ซ่อนไว้ -->
+            <li><button onclick="document.getElementById('id01').style.display='block'" class="btn-login">Login</button></li>
+        </ul>
+    </nav>
+
+    
+    <div class="container">
+        <img src="https://images.pexels.com/photos/19543998/pexels-photo-19543998.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Office">
+        <div class="data-absolute">
+            <header class="bars">
+                <div class="icon-bar">
+                    <a class="active-home" href="#"><i class="fa fa-home"></i></a>
+                    <a href="#"><i class="fa fa-search"></i></a>
+                    <a href="#"><i class="fa fa-envelope"></i></a>
+                    <a href="#"><i class="fa fa-globe"></i></a>
+                    <a href="#"><i class="fa fa-trash"></i></a>
+                </div>
+            </header>
+            <div class="new"><p>new</p></div>
+            <div class="macbook"><p>MacBook Pro</p></div>
+            <div class="super"><p>Supercharged for pros.</p></div>
+            <div class="from"><p>From $1999</p></div>
+            <button id="button-buy" type="button">Buy</button>
+            
+        </div>
+    </div>
+    
+    <!-- Login button -->
+    <div class="container-second animate" id="id01">
+        <form action="">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                <img src="../HTML_CSS_JS/HTML/image&video&music/phoom_300x.png" alt="">
+            </div>
+            
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+            
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+            
+            <label for="country">Country</label>
+            <select name="country" id="country">
+                <option value="thailand">Thailand</option>
+                <option value="usa">USA</option>
+                <option value="japan">Japan</option>
+            </select>
+            
+            <label for="subject">Subject</label>
+            <textarea name="subject" id="subject" placeholder="Write somthing.." style="height:200px;"></textarea>
+            
+            <input type="submit" value="Login">
+            
+            <div class="button-help" style="background-color:#f1f1f1">
+                <button id="button-cancel" type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                <div class="psw">Forgot <a href="https://support.google.com/?hl=th" target="_blank">password?</a></div>
+            </div>
+        </form>
+    </div>
+    <script>
+        const con_sec = document.getElementById('id01').value;
+        
+        window.onclick = function(event) {
+            if (event.target == con_sec) {
+                con_sec.style.display = "none";
+            }
+        }
+    </script>
+
+
+    <aside>
+        <div class="aside-left">
+            <input type="text" name="search" placeholder="Search..">
+            <i class="fa fa-search search-icon"></i>
+        </div>
+
+        <div class="btn">
+            <button class="btn-dropdown">เรียงตาม</button>
+            <div class="dropdown-right">
+                <button class="btn-arrow">
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <ul class="dropdown-content">
+                    <li><a href="#">ล่าสุด</a></li>
+                    <li><a href="#">ราคาต่ำ-สูง</a></li>
+                    <li><a href="#">ราคาสูง-ต่ำ</a></li>
+                </ul>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Slideshow -->
+    <div class="slideshow-container">
+        <!-- Resolution picture = 6000 x 4000 -->
+        <div class="mySlides fade">
+            <div class="numbertext"><p>1/3</p></div>
+            <img src="https://images.pexels.com/photos/7662060/pexels-photo-7662060.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" style="width: 100%;">
+            <div class="text">Phone</div>
+        </div>
+        
+        <div class="mySlides fade">
+            <div class="numbertext"><p>2/3</p></div>
+            <img src="https://images.pexels.com/photos/4132606/pexels-photo-4132606.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" style="width: 100%;">
+            <div class="text">Facebook</div>
+        </div>
+        
+        <div class="mySlides fade">
+            <div class="numbertext"><p>3/3</p></div>
+            <img src="https://images.pexels.com/photos/4546413/pexels-photo-4546413.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" style="width: 100%;">
+            <div class="text">Car</div>
+        </div>
+        
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+    <div>
+        <div style="text-align: center;">
+            <span class="dot" onclick="currentSlides(1)"></span>
+            <span class="dot" onclick="currentSlides(2)"></span>
+            <span class="dot" onclick="currentSlides(3)"></span>
+        </div>
+    </div>
+    <script>
+        /* Slideshow picture */
+        let slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+        function currentSlides(n) {
+            showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block";
+                dots[slideIndex-1].className += " active";
+            }
+    </script>
+
+
+    <!-- แม่สูตรคูณ -->
+    <h1 style="margin-left: 20px;">แม่สูตรคูณ</h1>
+    <nav>
+        <form>
+            <input type="number" id="input-number">
+            <button type="button" onclick="my_xd()" class="button-first">Click me</button>
+            <p id="result"></p>
+        </form>
+    </nav>
+
+    <section>
+        <div class="section-acc">
+            <button class="accordion">Section 1</button>
+            <div class="panel">
+                <p>Lerom ipsum...</p>
+            </div>
+            
+            <button class="accordion">Section 2</button>
+            <div class="panel">
+                <p>Lerem ipsum...</p>
+            </div>
+            
+            <button class="accordion">Section 3</button>
+            <div class="panel">
+                <p>Lerem ipsum...</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
