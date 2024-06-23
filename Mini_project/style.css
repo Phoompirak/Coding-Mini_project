@@ -49,11 +49,12 @@ nav.nav-bar {
 }
 
 .container {
-    position: relative;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 .container img {
+    position: relative;
     max-width: 100%;
     width: 100%;
     height: 50%;
@@ -62,7 +63,7 @@ nav.nav-bar {
 }
 .data-absolute {
     position: absolute;
-    top: 10px;
+    top: 20%;
     max-width: 70%;
     width: 900px;
     text-align: center;
@@ -75,6 +76,11 @@ nav.nav-bar {
     font-weight: bold;
 }.data-absolute .from {
     font-weight: 100;
+    border-right: 0.1rem solid aqua;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    animation: from steps(20, end) forwards infinite 6s;
 }.data-absolute button {
     font-size: 1.7rem;
     background-color: rgb(27, 118, 255);
@@ -92,6 +98,14 @@ nav.nav-bar {
     transform: scale(0.94);
 }
 
+@keyframes from{
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
 
 /* Style in form class container-second */
 .container-second {
@@ -225,10 +239,11 @@ form button:hover, input:hover {opacity: 0.8;}
 }
 #result {
     background-color: #0291ca;
-    width: 100px;
+    width: 30%;
+    max-width: 400px;
     height: 280px;
     border-radius: 10px;
-    margin: 1px 20px;
+    margin: 2rem 20px;
     text-align: center;
     box-shadow: 10px 10px 10px #474747;
 }
@@ -270,3 +285,5 @@ form button:hover, input:hover {opacity: 0.8;}
     overflow: hidden;
     transition: max-height 0.2s ease-out;
 }
+
+

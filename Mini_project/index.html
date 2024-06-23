@@ -96,13 +96,12 @@
         </form>
     </div>
     <script>
-        const con_sec = document.getElementById('id01').value;
+        const con_sec = document.getElementById('id01');
         
-        window.onclick = function(event) {
+        window.onclick = (event) => {
             if (event.target == con_sec) {
                 con_sec.style.display = "none";
-            }
-        }
+        }}
     </script>
 
 
@@ -205,17 +204,17 @@
         <div class="section-acc">
             <button class="accordion">Section 1</button>
             <div class="panel">
-                <p>Lerom ipsum...</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis pariatur tenetur iusto architecto quasi et officiis libero ipsam ratione quaerat, quibusdam beatae nemo recusandae laudantium voluptates odio nostrum exercitationem fuga!</p>
             </div>
             
             <button class="accordion">Section 2</button>
             <div class="panel">
-                <p>Lerem ipsum...</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, neque officia! Delectus maxime unde nihil. Illo ut nam facilis, est, quis quibusdam culpa quae cum repellendus eum et? Odit, sint.</p>
             </div>
             
             <button class="accordion">Section 3</button>
             <div class="panel">
-                <p>Lerem ipsum...</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates deserunt illo itaque iure quos, expedita eveniet perferendis maiores sed delectus, laudantium cumque suscipit placeat at corrupti ratione aut accusantium nam?</p>
             </div>
         </div>
     </section>

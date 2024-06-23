@@ -17,7 +17,11 @@
             <button id="change-mode" onclick="changeMode()">Mode Binary</button>
             <form class="input-binary">
                 <label for="input-b" id="label-input">Binary:</label>
-                <input type="text" id="input-data" placeholder="Insert Binary" id="">
+                <input
+                type="text"
+                id="input-data"
+                oninput="btnConvert(event)"
+                placeholder="Insert Binary">
             </form>
             
             <div class="show-convert">

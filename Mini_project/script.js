@@ -17,10 +17,12 @@ function my_xd() {
 /* End แม่สูตรคูณ */
 
 
+
 var acc = document.getElementsByClassName("accordion"); //mnet != ment
 var i;
 
 for (i = 0; i < acc.length; i++) {
+    console.log("Start acc");
     acc[i].addEventListener("click", function() {
         this.classList.toggle("active");
         var panel = this.nextElementSibling;
@@ -31,7 +33,7 @@ for (i = 0; i < acc.length; i++) {
         }
     });
 }
-/* End แม่สูตรคูณ */
+
 
 /* เปิดแถบข้างๆ */
 function openNav() {

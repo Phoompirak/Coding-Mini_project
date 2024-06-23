@@ -12,20 +12,19 @@ function changeMode() {
     }
     
 }
-function btnConvert() {
+function btnConvert(e) {
     if (change==1) {
-        let inputData = document.getElementById("input-data").value;
+        let inputData = e.target.value || document.getElementById("input-data").value;
         console.log(inputData)
         let resultDecimal = bToD(inputData);
         let resultData = document.getElementById("result-data");
         resultData.innerHTML = resultDecimal;
     } else {
-        let inputData = document.getElementById("input-data").value;
+        let inputData = e.target.value || document.getElementById("input-data").value;
         console.log(inputData)
         let resultDecimal = dToB(inputData);
         let resultData = document.getElementById("result-data");
         resultData.innerHTML = resultDecimal;
-
     }
 }
 // let result = document.getElementById("result-data");
