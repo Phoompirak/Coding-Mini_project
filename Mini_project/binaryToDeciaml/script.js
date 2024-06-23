@@ -1,6 +1,13 @@
 let change = 1;
 
 function changeMode() {
+    const inputData = document.getElementById("input-data").value;
+    const resultData = document.getElementById("result-data").innerHTML;
+
+    if (inputData) {
+        document.getElementById("input-data").value = resultData;
+        document.getElementById("result-data").innerHTML = inputData;
+    }
     if (change==1) {
         ModeToDecimal();
         change--;
